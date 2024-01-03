@@ -1,0 +1,112 @@
+body {
+  overflow: hidden;
+  animation: skyDarkness 3s linear infinite;
+}
+
+.star {
+  border-radius: 50%;
+  animation: starMovement 3s linear infinite;
+  background-color: white;
+}
+
+.sun-rotation {
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vh;
+  height: 100vh;
+  position: absolute;
+  animation: movement 3s linear infinite;
+}
+
+.moon-rotation {
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vh;
+  height: 100vh;
+  position: absolute;
+  animation: movement 3s linear infinite;
+  animation-delay: 1.5s;
+}
+
+.sun {
+  top: 15%;
+  left: -10%;
+  position: absolute;
+  height: 71px;
+  width: 71px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #ffeb3b, #ff9800, #e65100);
+  box-shadow: #ffeb3b 0px 0px 29px 24px, #e2d242 0px 0px 364px 73px;
+}
+
+.moon {
+  top: 35%;
+  left: -10%;
+  position: absolute;
+  background: radial-gradient(circle at 10% 10%, #f0f0f0, #a0a0a0);
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: gainsboro 0px 0px 364px 50px;
+  width: 50px;
+}
+
+@keyframes movement {
+  0% {
+    transform: rotate(0deg);
+    left: 0;
+  }
+
+  100% {
+    transform: rotate(180deg);
+    left: 75%;
+  }
+}
+
+@keyframes skyDarkness {
+  0% {
+    background-color: rgb(3, 8, 35);
+  }
+  25% {
+    background-color: white;
+  }
+  50% {
+    background-color: white;
+  }
+  100% {
+    background-color: rgb(3, 8, 35);
+  }
+}
+
+@keyframes sunMovement {
+  0% {
+    top: 15%;
+    left: 0%;
+  }
+  25% {
+    top: 0%;
+    left: 25%;
+  }
+  50% {
+    top: 15%;
+    left: 0%;
+  }
+  75% {
+    top: 0%;
+    left: 25%;
+  }
+  100% {
+    top: 15%;
+    left: 0%;
+  }
+}
+
+@keyframes starMovement {
+  to {
+    transform: translateX(30px);
+    transform: translateY(15px);
+  }
+}
